@@ -39,9 +39,17 @@ else:
 # Clase Baja Menos de $600.000
 
 str_sueldo_mensual = input('Ingrese su sueldo mensual: $')
-sueldo_mensual = float(str_sueldo_mensual)
+sueldo_mensual = 0.0 # float (str_sueldo_mensual)
 
-if sueldo_mensual > 7000000:
+if str_sueldo_mensual.isdigit():
+ sueldo_mensual = float(str_sueldo_mensual)
+
+else :
+    print ( " valor ingresado no corresponde ")
+
+if sueldo_mensual > 0:
+
+ if sueldo_mensual > 7000000:
     print('Ud. pertenece al grupo Alta Elite')
 elif 3500000 < sueldo_mensual <= 7000000:
     print('Ud. pertenece al grupo Alta Profesional')
@@ -49,5 +57,10 @@ elif 2000000 < sueldo_mensual <= 3500000:
     print('Ud. pertenece al grupo Media Alta')
 elif 1200000 < sueldo_mensual <= 2000000:
     print('Ud. pertenece al grupo Media Emergente')
-else:
+elif 700000 < sueldo_mensual <= 1200000 :
+     print("ud.pertenece al grupo media baja ")
+elif 600000 < sueldo_mensual <= 700000 : 
+    print("ud.pertenece al grupo baja menos")
+
+else : 
     print('Sueldo ingresado NO corresponde...')
