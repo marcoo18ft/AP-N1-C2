@@ -1,0 +1,54 @@
+# Teniendo 3 escalas de temperatura (Celsius, Fahrenheit, Kelvin)
+# Cree un conversor de temperaturas que le pida al usuario la temperatura y escala inicial
+# Y la escala a la que desea convertir, luego muestre el resultado de la conversión
+
+# °C a F = 1,8°C + 32°
+# F a °C = 5/9(°F-32°)
+
+# °C a K = °C + 273°
+# K a °C = K - 273°
+
+# K a F = (1,8°C + 32°) + 273°
+# F a K = (5/9(°F-32°)) + 273°
+
+print("Sistema Conversor de Temperaturas")
+print("=================================")
+print("Para comenzar ingrese su escala inicial")
+print("C - para Celsius")
+print("F - para Fahrenheit")
+print("K - para Kelvin")
+
+escala_inicial = input("Ingrese escala inicial: ").upper()
+str_temperatura = input("Ingrese su temperatura")
+escala_final = input("Ingrese escala final: ").upper()
+
+if str_temperatura.isdigit():
+    temperatura = float(str_temperatura)
+else:
+    print("El valor de temperatura NO corresponde.")
+
+if escala_inicial == "F":
+    if escala_final == "K":
+        resultado = #
+    elif escala_final == "C":
+        resultado = #
+    else:
+        print("Escala final NO corresponde.")
+elif escala_inicial == "C":
+    if escala_final == "K":
+        resultado = #
+    elif escala_final == "F":
+        resultado = #
+    else:
+        print("Escala final NO corresponde.")
+elif escala_inicial == "K":
+    if escala_final == "F":
+        resultado = #
+    elif escala_final == "C":
+        resultado = #
+    else:
+        print("Escala final NO corresponde.")
+else:
+    print("Escala inicial NO corresponde.")
+
+print(resultado)
