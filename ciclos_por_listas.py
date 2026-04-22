@@ -1,57 +1,45 @@
-# Teniendo 3 escalas de temperatura (Celsius, Fahrenheit, Kelvin)
-# Cree un conversor de temperaturas que le pida al usuario la temperatura y escala inicial
-# Y la escala a la que desea convertir, luego muestre el resultado de la conversión
+# Ciclo FOR (por) para iterar LISTAS
+# Recorro cada uno de los elementos de la lista
 
-# °C a F = 1,8°C + 32°
-# F a °C = 5/9(°F-32°)
+lista_bandas = ['P.O.D.','Skillet','Demon Hunter']
+nombre_personal = 'Erick Bailey'
 
-# °C a K = °C + 273°
-# K a °C = K - 273°
+# Usamos el método RANGE para crear un rango de números
+# Si a RANGE le pasamos 1 argumento, creará una lista de números de la cantidad entregada
+# La lista inicia en el índice 0
+lista_numeros = range(5)
 
-# K a F = (1,8°C + 32°) + 273°
-# F a K = (5/9(°F-32°)) + 273°
+# SI a RANGE le pasamos 2 argumentos, le indicamos desde donde inicia y el elemento final -1
+lista_numeros_2 = range(10,20)
 
-msg_escala_erronea = 'Escala final NO corresponde.'
+# Si a RANGE le pasamos 3 argumentos, le indicamos desde donde inicia, el elemento final -1 y el avance entre elementos
+lista_numeros_3 = range(5,26,5)
 
-print("Sistema Conversor de Temperaturas")
-print("=================================")
-print("Para comenzar ingrese su escala inicial")
-print("C - para Celsius")
-print("F - para Fahrenheit")
-print("K - para Kelvin")
+banda_encontrada = False
+buscar_banda = input('Qué banda busca?')
+
+for banda in lista_bandas:
+    banda_mayusculas = banda.upper()
+    if banda_mayusculas == buscar_banda.upper():
+        banda_encontrada = True
+if banda_encontrada == True:
+    print('Banda Encontrada!')
+else:
+    print('Banda NO encontrada!')
 
 print()
-escala_inicial = input("Ingrese escala inicial: ").upper()
-str_temperatura = input("Ingrese su temperatura: ")
-escala_final = input("Ingrese escala final: ").upper()
+for letra in nombre_personal:
+    print(letra)
 
-if str_temperatura.isdigit():
-    temperatura = float(str_temperatura)
-else:
-    print("El valor de temperatura NO corresponde.")
+print()
+for numero in lista_numeros:
+    resultado = numero * 5
+    print(resultado)
 
-if escala_inicial == "F":
-    if escala_final == "K":
-        resultado = (5/9 * (temperatura-32)) + 273
-    elif escala_final == "C":
-        resultado = 5/9 * (temperatura-32)
-    else:
-        print(msg_escala_erronea)
-elif escala_inicial == "C":
-    if escala_final == "K":
-        resultado = temperatura + 273
-    elif escala_final == "F":
-        resultado = 1,8 * temperatura+ 32
-    else:
-        print(msg_escala_erronea)
-elif escala_inicial == "K":
-    if escala_final == "F":
-        resultado = (1,8 * temperatura + 32) + 273
-    elif escala_final == "C":
-        resultado = temperatura - 273
-    else:
-        print(msg_escala_erronea)
-else:
-    print("Escala inicial NO corresponde.")
+print()
+for elemento in lista_numeros_2:
+    print(elemento)
 
-print(f'{temperatura} {escala_inicial}° = {round(resultado,2)} {escala_final}°')
+print()
+for elemento in lista_numeros_3:
+    print(elemento)
