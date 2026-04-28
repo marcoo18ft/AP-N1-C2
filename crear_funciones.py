@@ -49,22 +49,33 @@ def pedir_datos():
 # multiplicacion(a,b)
 # division(a,b)
 
+
 print('\nBienvenido a Mi primera CALCULADORA')
 print('====================================')
-print('[1] Suma')
-print('[2] Resta')
-print('[3] Multiplicación')
-print('[4] División')
-opcion = input('\nSeleccione su operación [1-4]: ')
+ciclo = True
 
-a,b = pedir_datos()
-if opcion == '1':
-    suma(a,b)
-elif opcion == '2':
-    resta(a,b)
-elif opcion == '3':
-    multiplicacion(a,b)
-elif opcion == '4':
-    division(a,b)
-else:
-    print('Opción NO válida.')
+while ciclo == True:
+    print('\n[1] Suma')
+    print('[2] Resta')
+    print('[3] Multiplicación')
+    print('[4] División')
+    print('[0] Salir')
+    opcion = input('\nSeleccione su operación [0-4]: ')
+
+    if opcion == '0':
+        ciclo = False
+        print('Gracias por usar mi calculadora!')
+        print('Saliendo...')
+    else:
+        a,b = pedir_datos()
+        
+        if opcion == '1':
+            suma(a,b)
+        elif opcion == '2':
+            resta(a,b)
+        elif opcion == '3':
+            multiplicacion(a,b)
+        elif opcion == '4':
+            division(a,b)
+        else:
+            print('Opción NO válida.')
