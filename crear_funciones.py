@@ -5,23 +5,25 @@
 # Luego de DEF ponemos el NOMBRE de la función
 # Luego del NOMBRE de la FUNCIÓN ponemos sus ARGUMENTOS
 # Los ARGUMENTOS serán los insumos que usará la función para hacer su trabajo
+
 def suma(a,b):
     # Este será el contenido de la función
     resultado = a + b
-    print(f'{a} + {b} = {resultado}')
+    # Usamos la palabra reservada RETURN para RETORNAR o DEVOLVER el resultado de nuestra FUNCIÓN
+    return resultado
 
 def resta(a,b):
     resultado = a - b
-    print(f'{a} - {b} = {resultado}')
+    return resultado
 
 def multiplicacion(a,b):
     resultado = a * b
-    print(f'{a} x {b} = {resultado}')
+    return resultado
 
 def division(a,b):
     if b != 0:
         resultado = a / b
-        print(f'{a} / {b} = {resultado}')
+        return resultado
     else:
         print('No es posible dividir por 0!')
 
@@ -29,13 +31,14 @@ def pedir_datos():
     str_numero_1 = input('Ingrese primer número: ')
     str_numero_2 = input('Inrese segundo número: ')
 
+    # Cuando utilizamos (llamamos) a una función que tiene un RETURN, necesitamos recibir ese valor en una variable
     num_1 = convertir_float(str_numero_1)
     num_2 = convertir_float(str_numero_2)
 
     if num_1 and num_2 != False:
         return(num_1,num_2)
     else:
-        print('Valor NO corresponde a un número!')
+        return(False,False)
 
 def convertir_float(valor):
     try:
@@ -65,14 +68,23 @@ while ciclo == True:
             print('Saliendo...')
         else:
             a,b = pedir_datos()
+            operacion = ''
 
-            if opcion == '1':
-                suma(a,b)
-            elif opcion == '2':
-                resta(a,b)
-            elif opcion == '3':
-                multiplicacion(a,b)
-            elif opcion == '4':
-                division(a,b)
+            if a and b != False:
+                if opcion == '1':
+                    operacion = '+'
+                    valor = suma(a,b)
+                elif opcion == '2':
+                    operacion = '-'
+                    valor = resta(a,b)
+                elif opcion == '3':
+                    operacion = 'x'
+                    valor = multiplicacion(a,b)
+                elif opcion == '4':
+                    operacion = '/'
+                    valor = division(a,b)
+                print(f'{a} {operacion} {b} = {valor}')
+            else:
+                print('Valor NO corresponde a un número!')
     else:
         print('Opción NO válida.')
