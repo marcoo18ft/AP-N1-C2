@@ -2,7 +2,7 @@
 # Son ideales para realizar operaciones de conjunto como uniones, intersecciones y diferencias,
 # así como para eliminar elementos duplicados de una colección.
 # NO se puede acceder a los elementos por un ÍNDICE ni por una CLAVE.
-
+str_nombre = "Armando Casas"
 print("Trabajando con CONJUNTOS.\n==========================")
 conjunto = {"Armando Casas", True, 1.73}
 # conjunto[1] = "Nuevo Valor" # Cambio NO válido, no se puede acceder a los elementos por ÍNDICE
