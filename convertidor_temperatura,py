@@ -18,7 +18,7 @@ print("=================================")
 print("Para comenzar ingrese su escala inicial")
 print("C - para Celsius")
 print("F - para Fahrenheit")
-print("K - para Kelvin")
+# print("K - para Kelvin")
 
 print()
 escala_inicial = input("Ingrese escala inicial: ").upper()
