@@ -55,14 +55,28 @@ def factorial():
         resultado = resultado * valor
     return f'{numero}! = {resultado}'
 
+# 4.- Solicte al usuario ingresar 3 notas y va a calcular el promedio 
+# indicando si el alumno aprueba (nota >= 4.0) o reprueba (nota < 4.0)
+def promedio():
+    pass
+
 def menu_principal():
+    # opciones_menu = ['Saludo Cordial','Saludo Personal','Saludo Personal 2','Factorial','Calculo Promedio']
+    diccionario_menu = {
+        '1':'Saludo Cordial',
+        '2':'Saludo Personal',
+        '3':'Saludo Personal 2',
+        '4':'Factorial',
+        '5':'Calculo Promedio',
+        '0':'Salir'
+    }
+    # contador = 0
     while True:
         print()
-        print('[1] Saludo Cordial')
-        print('[2] Saludo Personal')
-        print('[3] Saludo Personal 2')        
-        print('[4] Factorial')
-        print('[0] Salir')
+        # for elemento in opciones_menu:
+        #     contador+=1       
+        #     print(f'[{contador}] {elemento}')
+        # print('[0] Salir')
 
         opcion = input('Ingrese su Opción [0-4]: ')
         valores_opcion = ['0','1','2','3','4']
@@ -76,6 +90,8 @@ def menu_principal():
                 respuesta = saludo_personal_2()
             elif opcion == '4':
                 respuesta = factorial()
+            elif opcion == '5':
+                respuesta = promedio()
             elif opcion == '0':
                 print('Saliendo del sistema...')
                 break
