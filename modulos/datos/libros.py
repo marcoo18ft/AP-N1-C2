@@ -1,3 +1,3 @@
 listado_libros={
-    "tituo_libro:" ","isbn": ","editorial": ","paginas": ","categorias": " "}
+    "titulo_libro":"", "isbn":"", "editorial":"", "paginas":"", "categorias":""
 }
