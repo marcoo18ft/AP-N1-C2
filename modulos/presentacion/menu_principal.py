@@ -9,7 +9,10 @@ def menu_principal():
     print(f'{'=' * len(titulo)}=={'=' * len(numero_version)}')
 
     while True:
+        titulo = 'Menú Principal'
         print()
+        print(titulo)
+        print('=' * len(titulo))
         for clave, valor in datos_menu.items():
             print(f'[{clave}] {valor}')
         opcion_usuario = seleccionar_opcion(datos_menu)
@@ -52,6 +55,7 @@ def menu_principal():
         elif opcion_usuario == '3':
             # Gestión Lectores
             while True:
+                opcion_sub_menu = sub_menu('Lector')
                 if opcion_sub_menu == '1':
                     pass
                 elif opcion_sub_menu == '2':
@@ -133,7 +137,10 @@ def seleccionar_opcion(menu):
             return opcion
 
 def sub_menu(tipo_dato):
+    titulo = f'Submenú {tipo_dato}'
     print()
+    print(titulo)
+    print('=' * len(titulo))
     for clave, valor in datos_sub_menu.items():
         if clave != '0':
             print(f'[{clave}] {valor} {tipo_dato}')

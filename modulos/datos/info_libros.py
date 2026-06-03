@@ -1,3 +1,1 @@
-listado_libros = [
-    {'titulo_libro':'El Hobbit','isbn':'9789569957543','editorial':'Minotauro','paginas':288,'categoria':'Fantasía'}
-]
+listado_libros = [{'id': 1, 'titulo_libro': 'El Hobbit', 'isbn': '9789562476171', 'editorial': 'MINOTAURO', 'paginas': '320', 'categoria': 'Literatura Fantástica'}, {'id': 2, 'titulo_libro': 'La Comunidad Del Anillo', 'isbn': '9789562477062', 'editorial': 'MINOTAURO', 'paginas': '576', 'categoria': 'Narrativa Fantástica'}]
