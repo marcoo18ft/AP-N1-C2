@@ -1,12 +1,10 @@
-from datos import datos_menu,opciones_validas_menu,datos_sub_menu,mensaje_volver,opciones_validas_sub_menu,mensaje_opcion_incorrecta
+from datos import datos_menu,opciones_validas_menu,datos_sub_menu,mensaje_volver,opciones_validas_sub_menu,mensaje_opcion_incorrecta,titulo_app
 from datos import numero_version
 from presentacion.control_libro import agregar_libro,listar_libros,modificar_libro,eliminar_libro
 
-titulo = 'Sistema Gestión Biblioteca'
-
 def menu_principal():
-    print(f'\n{titulo} v{numero_version}')
-    print(f'{'=' * len(titulo)}=={'=' * len(numero_version)}')
+    print(f'\n{titulo_app} v{numero_version}')
+    print(f'{'=' * len(titulo_app)}=={'=' * len(numero_version)}')
 
     while True:
         titulo = 'Menú Principal'

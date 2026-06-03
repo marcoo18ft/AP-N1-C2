@@ -1,6 +1,6 @@
 from datos import listado_libros
 from prettytable import PrettyTable
-from negocio import procesar_libro
+from negocio import procesar_libro,crear_tabla_libros
 
 def agregar_libro():
     titulo = '\nAgregar Libro'
@@ -14,13 +14,11 @@ def agregar_libro():
 
 def listar_libros():
     tabla_libros = PrettyTable()
-    tabla_libros.field_names = ['N°','Título','ISBN','Editorial','Páginas','Categoría']
 
     titulo = '\nListado de Libros'
     print(titulo)
     print('=' * len(titulo))
-    for libro in listado_libros:
-        tabla_libros.add_row([libro['id'],libro['titulo_libro'],libro['isbn'],libro['editorial'],libro['paginas'],libro['categoria']])
+    tabla_libros = crear_tabla_libros()
     print(tabla_libros)
 
 def modificar_libro():
@@ -32,3 +30,21 @@ def eliminar_libro():
     titulo = '\nEliminar Libro'
     print(titulo)
     print('=' * len(titulo))
+
+def solicitar_datos_libro():
+    titulo_libro = isbn = editorial = paginas = categoria = ''
+    while titulo_libro == '':
+        titulo_libro = input('Título: ').strip()
+    while isbn == '':
+        isbn = input('ISBN: ').strip()
+    while editorial == '':
+        editorial = input('Editorial: ').strip()
+    while paginas == '':
+        paginas = input('Cantidad de Páginas: ').strip()
+    while categoria == '':
+        categoria = input('Categoría: ').strip()
+    return titulo_libro,isbn,editorial,paginas,categoria
+
+def solicitar_dato(tipo_dato,nombre_dato):
+    while tipo_dato == '':
+        tipo_dato = input(f'{nombre_dato}: ').strip()

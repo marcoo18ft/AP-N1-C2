@@ -1,3 +1,3 @@
-from presentacion import menu_principal
 
-menu_principal()
+
+from presentacion import menu_principal
