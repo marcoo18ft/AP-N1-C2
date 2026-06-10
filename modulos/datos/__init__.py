@@ -3,4 +3,4 @@ from datos.data_almacenada.info_menus import datos_menu,opciones_validas_menu,da
 from datos.data_almacenada.info_libros import listado_libros
 from datos.data_almacenada.info_usuarios import listado_usuarios
 from datos.data_libros import escribir_data_libros
-from .data_usuarios import escribir_data_usuarios
+from datos.data_usuarios import escribir_data_usuarios
