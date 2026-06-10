@@ -1,4 +1,9 @@
-import maskpass
+try:
+    import maskpass
+    askpass = maskpass.askpass
+except ImportError:
+    import getpass
+    askpass = getpass.getpass
 
 def solicitar_datos_libro():
     titulo_libro = isbn = editorial = paginas = categoria = ''
@@ -25,7 +30,10 @@ def solicitar_datos_usuario():
     while rut_usuario == '':
         rut_usuario = input('RUT: ').strip()
     while contrasena_usuario == '':
-        contrasena_usuario = maskpass.askpass(prompt="Contraseña: ", mask="*").strip()
+        try:
+            contrasena_usuario = askpass(prompt="Contraseña: ", mask="*").strip()
+        except TypeError:
+            contrasena_usuario = askpass("Contraseña: ").strip()
     return nombre_usuario,correo_usuario,telefono_usuario,rut_usuario,contrasena_usuario
 
 def solicitar_dato(mensaje_input):
