@@ -1,0 +1,28 @@
+1.- Crear el archivo info_usuario.py para almacenar la data de usuarios.
+    Crear dentro de este archivo un listado_usuarios, que contendrá un diccionario con la data de cada usuario.
+        La data de usuario será:
+            - Nombre
+            - Correo
+            - Teléfono
+            - Rut
+            - COntraseña
+
+2.- Agregar listado creado a __init__.py de datos.
+    Agregar un diccionario con los datos de un usuario inicial:
+    {
+        'nombre':'Nombre Usuario',
+        'correo':'correo@usuario.us',
+        'telefono':'12345678',
+        'rut':'12.345.678-5',
+        'contrasena':'contrasena_usuario'
+    }
+
+3.- En la capa de presentación debemos crear los métodos que llamaremos desde el sub-menú usuarios
+    - Listado Usuario
+    - Agregar Usuario
+    - Modificar Usuario
+    - Eliminar Usuario
+    
+4.- En la capa de negocio, creamos los métodos:
+    - Traer la data desde listado_usuarios y armar un PrettyTable.
+    - Almacenar la data de usuario, ingresada por un usuario, en el archivo info_usuarios.

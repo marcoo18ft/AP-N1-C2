@@ -1,4 +1,4 @@
-from datos.version import numero_version
-from datos.datos_menu import datos_menu,opciones_validas_menu,datos_sub_menu,mensaje_volver,opciones_validas_sub_menu,mensaje_opcion_incorrecta,titulo_app
+from modulos.datos.info_version import numero_version
+from modulos.datos.info_menu import datos_menu,opciones_validas_menu,datos_sub_menu,mensaje_volver,opciones_validas_sub_menu,mensaje_opcion_incorrecta,titulo_app
 from datos.info_libros import listado_libros
 from datos.data_libros import obtener_data_libros,escribir_data_libros

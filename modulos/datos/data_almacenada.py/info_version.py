@@ -19,5 +19,6 @@ PATCH: Se incrementa cuando se corrigen errores o se hacen
 #   19.25.2026  : Inicio del proyecto (v1.0.0) Definir arquitectura en capas del proyecto (datos, negocio, presentacion). v1.0.0
 #   20.05.2026  : Modificar menús de acceso a la aplicación. v1.0.1
 #   26.05.2026  : Agregando funcionalidad para gestionar libros. v1.1.1
+#   03.06.2026  : Creando métodos para crear, listar y modificar libros. v1.2.1
 
-numero_version = '1.1.1'
+numero_version = '1.2.1'
