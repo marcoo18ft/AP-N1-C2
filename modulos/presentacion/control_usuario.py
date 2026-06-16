@@ -21,6 +21,10 @@ def listar_usuarios():
     tabla_usuarios = crear_tabla_usuarios()
     print(tabla_usuarios)
 
+    def login_usuario():
+        correo_usuario = input('Ingrese su Correo: ')
+        usuario = buscar_usuario_correo(correo_usuario)
+
 def modificar_usuario():
     titulo = '\nModificar Usuario'
     print(titulo)

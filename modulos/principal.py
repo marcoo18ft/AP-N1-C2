@@ -1,3 +1,6 @@
-from presentacion import menu_principal
+from presentacion import acceso
 
-menu_principal()
+# menu principal
+
+
+acceso()

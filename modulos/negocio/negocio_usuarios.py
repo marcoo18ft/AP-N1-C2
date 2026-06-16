@@ -24,7 +24,12 @@ def crear_tabla_usuarios():
     
     return tabla_usuarios
 
-def buscar_usuario(nombre):
+def buscar_usuario_nombre(nombre):
     for usuario in listado_usuarios:
         if usuario['nombre'].lower() == nombre.lower():
             return usuario
+
+            def buscar_usuario_correo(correo):
+                for usuario in listado_usuarios:
+                    if usuario['correo'].lower() == correo.lower():
+                        return usuario
