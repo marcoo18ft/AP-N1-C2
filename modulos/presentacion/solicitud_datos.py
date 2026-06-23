@@ -28,14 +28,20 @@ def solicitar_datos_usuario():
     while contrasena_usuario == '':
         contrasena_usuario = maskpass.askpass(prompt="Contraseña: ", mask="*").strip()
     password = contrasena_usuario.encode('utf-8')
-    hashed = bcrypt.hashpw(password, bcrypt.gensalt())
-    return nombre_usuario,correo_usuario,telefono_usuario,rut_usuario,hashed
+    contrasena_encriptada = bcrypt.hashpw(password, bcrypt.gensalt())
+    return nombre_usuario,correo_usuario,telefono_usuario,rut_usuario,contrasena_encriptada
 
 def solicitar_dato(mensaje_input):
-    tipo_dato = ''
-    while tipo_dato == '':
-        tipo_dato = input(f'{mensaje_input}').strip()
-        return tipo_dato
+    dato_ingresado = ''
+    while dato_ingresado == '':
+        dato_ingresado = input(f'{mensaje_input}').strip()
+        return dato_ingresado
+    
+def solicitar_contrasena(mensaje_input):
+    contrasena = ''
+    while contrasena == '':
+        contrasena = maskpass.askpass(prompt=f"{mensaje_input}", mask="*").strip()
+        return contrasena
 
 def nuevos_datos_libro():
     pass

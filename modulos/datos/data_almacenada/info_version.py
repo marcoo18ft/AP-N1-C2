@@ -20,5 +20,8 @@ PATCH: Se incrementa cuando se corrigen errores o se hacen
 #   20.05.2026  : Modificar menús de acceso a la aplicación. v1.0.1
 #   26.05.2026  : Agregando funcionalidad para gestionar libros. v1.1.1
 #   03.06.2026  : Creando métodos para crear, listar y modificar libros. v1.2.1
+#   10.06.2026  : Creando métodos para crear, listar y modificar usuarios. v1.3.1
+#   03.06.2026  : Agregando métodos para encriptar contraseñas. v1.4.1
+#   16.06.2026  : Implementado sistema de login v1.5.1
 
-numero_version = '1.2.1'
+numero_version = '1.5.1'

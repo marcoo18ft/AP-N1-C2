@@ -1,6 +1,6 @@
 datos_menu = {
     '1':'Gestión Libros',
-    '2':'Gestión Autores',
+    '2':'Gestión Usuarios',
     '3':'Gestión Lectores',
     '4':'Gestión Préstamos',
     '5':'Gestión Sistema',
@@ -22,4 +22,5 @@ opciones_validas_sub_menu = ['1','2','3','4','0']
 
 titulo_app = 'Sistema Gestión Biblioteca'
 mensaje_volver = 'Volviendo al menú principal.'
-mensaje_opcion_incorrecta = 'Opción Ingresada NO Corresponde.'
+opcion_incorrecta = 'Opción Ingresada NO Corresponde.'
+usuario_no_encontrado = 'Usuario NO encontrado.'

@@ -1,2 +1,2 @@
-from negocio.negocio_libros import procesar_libro
-from negocio.negocio_usuarios import procesar_usuario, crear_tabla_usuarios, buscar_usuario
+from negocio.negocio_libros import procesar_libro,crear_tabla_libros,buscar_libro
+from negocio.negocio_usuarios import procesar_usuario,crear_tabla_usuarios,buscar_usuario_nombre,buscar_usuario_correo,bloquear_usuario

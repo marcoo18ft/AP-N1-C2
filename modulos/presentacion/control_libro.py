@@ -1,4 +1,4 @@
-from datos import listado_libros
+from datos import listado_libros,escribir_data_libros
 from prettytable import PrettyTable
 from negocio import procesar_libro,crear_tabla_libros,buscar_libro
 from presentacion.solicitud_datos import solicitar_dato,nuevos_datos_libro
@@ -10,7 +10,7 @@ def agregar_libro():
     listar_libros()
 
     print('\nIngrese los datos del libro:')
-    procesar_libro()
+    escribir_data_libros()
 
 def listar_libros():
     tabla_libros = PrettyTable()
@@ -27,9 +27,10 @@ def modificar_libro():
     print('=' * len(titulo))
     titulo_libro = solicitar_dato('Ingrese el título del libro: ')
     libro = buscar_libro(titulo_libro)
-    print(f'\nDatos del Libro\n{"=" * 15}')
-    print(f'N°: {libro['id']} \nTítulo: {libro['titulo_libro']} \nISBN: {libro['isbn']} \nEditorial: {libro['editorial']} \nCantidad Páginas: {libro['paginas']} \nCategoría: {libro['categoria']}')
-    nuevos_datos_libro()
+    if libro:
+        print(f'\nDatos del Libro\n{"=" * 15}')
+        print(f'N°: {libro['id']} \nTítulo: {libro['titulo_libro']} \nISBN: {libro['isbn']} \nEditorial: {libro['editorial']} \nCantidad Páginas: {libro['paginas']} \nCategoría: {libro['categoria']}')
+        nuevos_datos_libro()
 
 def eliminar_libro():
     titulo = '\nEliminar Libro'
