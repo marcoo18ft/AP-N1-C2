@@ -1,2 +1,4 @@
 from negocio.negocio_libros import procesar_libro,crear_tabla_libros,buscar_libro
 from negocio.negocio_usuarios import procesar_usuario,crear_tabla_usuarios,buscar_usuario_nombre,buscar_usuario_correo,bloquear_usuario
+from negocio.validar_rut import rut_valido
+from negocio.validar_datos_usuario import rut_en_uso

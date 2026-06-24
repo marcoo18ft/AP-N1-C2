@@ -1,6 +1,4 @@
-from presentacion import acceso
+from presentacion import acceso,menu_principal
 
-# menu principal
-
-
+# menu_principal()
 acceso()
