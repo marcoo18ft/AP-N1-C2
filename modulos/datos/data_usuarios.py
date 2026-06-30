@@ -7,3 +7,10 @@ def escribir_data_usuarios(lista_usuarios):
     archivo_libros = open(ruta_final,'+w', encoding="utf-8")
     archivo_libros.write(f'listado_usuarios = {lista_usuarios}')
     archivo_libros.close()
+    print("Usuario agregado correctamente")
+
+    except PermissionError:
+    print("No a sido posible grabar los datos : No tiene permisos de escritura .")
+    except FileNotFoundError:
+    print("No a sido posible grabar los datos : No se encuentra el archivo .")
+    except OSError as

@@ -52,6 +52,7 @@ def validar_email():
         patron = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,5}+$'
         
         if re.match(patron, correo):
+            usuario = 
             return correo
         else:
             print('Correo inválido, ingrese nuevamente.')

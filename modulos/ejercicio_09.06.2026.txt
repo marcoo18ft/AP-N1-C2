@@ -26,3 +26,18 @@
 4.- En la capa de negocio, creamos los métodos:
     - Traer la data desde listado_usuarios y armar un PrettyTable.
     - Almacenar la data de usuario, ingresada por un usuario, en el archivo info_usuarios.
+
+Usuario de Pruebas:
+    Correo: test@test.test
+    Contraseña: 12345
+
+    Correo: probando.contrasena@test.test
+    Contraseña: Test@12345
+
+Modificaciones X realizar:
+    Validar correo único
+    Validar rut único
+    Validar cantidad de veces para login => OK
+    Agregar mensaje de confirmación de creación de usuario
+
+    Crear data de categorías para seleccionarla al agregar un libro
